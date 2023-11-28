@@ -37,3 +37,4 @@ D:\IsmaelRuge\Desktop\Proyectos\Prueba_Ismael_Ruge\obj\Debug\net7.0\refint\Prueb
 D:\IsmaelRuge\Desktop\Proyectos\Prueba_Ismael_Ruge\obj\Debug\net7.0\Prueba_Ismael_Ruge.pdb
 D:\IsmaelRuge\Desktop\Proyectos\Prueba_Ismael_Ruge\obj\Debug\net7.0\Prueba_Ismael_Ruge.genruntimeconfig.cache
 D:\IsmaelRuge\Desktop\Proyectos\Prueba_Ismael_Ruge\obj\Debug\net7.0\ref\Prueba_Ismael_Ruge.dll
+D:\IsmaelRuge\Desktop\Proyectos\Prueba_Ismael_Ruge\obj\Debug\net7.0\Prueba_Ismael_Ruge.sourcelink.json

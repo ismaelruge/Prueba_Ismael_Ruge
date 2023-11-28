@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Prueba_Ismael_Ruge")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8997273d66a2779e95ff3a807f5d24879b240a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Prueba_Ismael_Ruge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Prueba_Ismael_Ruge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
