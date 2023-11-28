@@ -1,0 +1,141 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modar_Add">
+    Agregar
+</button>
+
+<div class="row">
+    <div class="col-12">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Estado</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyTab"></tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="modal fade" id="Modar_Add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Insertar Registro</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="Crear">
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Tipo de Documento</label>
+                        <select id="TipoDocumento" class="form-select" required>
+                            <option value="">Seleccione</option>
+                            <option value="CC">Cédula de Ciudadanía</option>
+                            <option value="TI">Tarjeta de Identidad</option>
+                            <option value="PA">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Número de Documento</label>
+                        <input id="NumDocumento" class="form-control" type="number" required />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Nombres</label>
+                        <input id="Nombres" class="form-control" type="text" required maxlength="255" />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Apellidos</label>
+                        <input id="Apellidos" class="form-control" type="text" required maxlength="255" />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Correo Electrónico</label>
+                        <input id="Email" class="form-control" type="email" />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Teléfono</label>
+                        <input id="Telefono" class="form-control" type="tel" />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Fecha de Nacimiento</label>
+                        <input id="FNacimiento" class="form-control" type="date" />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-check-label">Estado Afiliación</label>
+                        <input id="Estado" class="form-check-input" type="checkbox" />
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-auto"><button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                        <div class="col-auto"><button type="submit" class="btn btn-primary">Guardar</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Modar_Edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Editar Registro</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="Editar">
+                    <input id="IdEdit" type="hidden" />
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Tipo de Documento</label>
+                        <select id="TipoDocumentoEdit" class="form-select" required>
+                            <option value="">Seleccione</option>
+                            <option value="CC">Cédula de Ciudadanía</option>
+                            <option value="TI">Tarjeta de Identidad</option>
+                            <option value="PA">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Número de Documento</label>
+                        <input id="NumDocumentoEdit" class="form-control" type="number" required />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Nombres</label>
+                        <input id="NombresEdit" class="form-control" type="text" required maxlength="255" />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Apellidos</label>
+                        <input id="ApellidosEdit" class="form-control" type="text" required maxlength="255" />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Correo Electrónico</label>
+                        <input id="EmailEdit" class="form-control" type="email" />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Teléfono</label>
+                        <input id="TelefonoEdit" class="form-control" type="tel" />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Fecha de Nacimiento</label>
+                        <input id="FNacimientoEdit" class="form-control" type="date" />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-check-label" for="EstadoEdit">Estado Afiliación</label>
+                        <input id="EstadoEdit" class="form-check-input" type="checkbox" />
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-auto"><button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+                        <div class="col-auto"><button type="submit" class="btn btn-success">Editar</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/Index.js"></script>
